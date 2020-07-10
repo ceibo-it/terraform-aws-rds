@@ -55,6 +55,7 @@ resource "aws_db_instance" "default" {
   option_group_name           = length(var.option_group_name) > 0 ? var.option_group_name : join("", aws_db_option_group.default.*.name)
   license_model               = var.license_model
   multi_az                    = var.multi_az
+  availability_zone           = var.availability_zone
   storage_type                = var.storage_type
   iops                        = var.iops
   publicly_accessible         = var.publicly_accessible

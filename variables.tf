@@ -110,6 +110,12 @@ variable "multi_az" {
   default     = false
 }
 
+variable "availability_zone" {
+  type        = string
+  description = "The AZ for the RDS instance"
+  default     = null
+}
+
 variable "storage_type" {
   type        = string
   description = "One of 'standard' (magnetic), 'gp2' (general purpose SSD), or 'io1' (provisioned IOPS SSD)"
